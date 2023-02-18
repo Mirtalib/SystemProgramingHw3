@@ -1,0 +1,52 @@
+﻿<Window x:Class="SystemProgramingHw3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemProgramingHw3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,0,5">
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button 
+                Margin="40"
+                Content="File..."
+                FontSize="20"
+                Background="Wheat"
+                Click="Button_Click"></Button>
+
+
+            <TextBox Grid.Column="1"
+                     VerticalAlignment="Center"
+                     ></TextBox>
+        </Grid>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal">
+            <TextBlock Text="Password" VerticalAlignment="Center" FontSize="20"></TextBlock>
+            <TextBox Name="txtCheck" VerticalAlignment="Center" Margin="10" Width="200"></TextBox>
+            <RadioButton x:Name="radioenkrypt" VerticalAlignment="Center" Content="enkrypt" FontSize="17"></RadioButton>
+            <RadioButton VerticalAlignment="Center" Margin="30" Content="dekrypt" FontSize="17"></RadioButton>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2">
+            <ProgressBar Height="20" Margin="30"></ProgressBar>
+
+            <Button  Width="100" Height="20" Content="Start" Click="Button_Click_1" ></Button>
+            <Button Width="100" Height="20" Margin="10" Content="Start"></Button>
+            
+        </StackPanel>
+        
+        
+    </Grid>
+</Window>
